@@ -1,0 +1,96 @@
+/* =========================================================================
+   1. TOKENS — tout le thème est ici. Les composants n'utilisent jamais de
+      valeur en dur : changer la palette suffit à changer le site.
+   ========================================================================= */
+:root{
+  /* --- Palette : les teintes de la marque. C'est ici qu'on modifie. --- */
+  --color-primary:#e465f8;        /* violet de la marque, celui du logo */
+  --color-primary-dark:#8e12aa;   /* violet lisible sur blanc (7,5:1), pour les liens et textes */
+  --color-secondary:#300e3b;      /* prune */
+  --color-black:#000000;
+  --color-white:#ffffff;
+  --color-neutral:#4f4a57;        /* gris des textes secondaires (8,4:1 sur blanc) */
+  --color-neutral-light:#f5f2f7;  /* fonds d'encarts */
+
+  /* --- Couleurs des tissus --- */
+  /* Tissus extérieurs */
+  --color-ecopak-deeppurple:#4e4482;
+  --color-ecopak-flamingopink:#f82d6b;
+  --color-ecopak-fushia:#922e75;
+  --color-xpak-turquoisegreen:#048f8c;
+  --color-xpak-cornflowerblue:#0451b4;
+  --color-xpak-violet:#31155d;
+  --color-xpak-cadmiumgreen:#0d8070;
+  --color-xpak-goldenrod:#c79b04;
+  --color-xpak-bluebell:#6c80aa;
+  --color-xpak-cayenne:#a83c1e;
+  --color-xpak-alpenglow:#eb936e;
+  --color-xpak-coyotebrown:#030303;
+  --color-xpak-evergreen:#568f64;
+  --color-xpak-fluorescentorange:#fb4803;
+  --color-xpak-coral:#f77861;
+  --color-xpak-red:#990323;
+
+  /* Tissus intérieurs */
+  --color-ripstop-gold:#c39941;
+  --color-ripstop-white:#ffffff;
+  --color-ripstop-magenta:#e21588;
+  --color-ripstop-red:#dc0d2a;
+  --color-ripstop-orange:#f25b06;
+  --color-ripstop-yellow:#f4c903;
+  --color-ripstop-applegreen:#3fcb0e;
+  --color-ripstop-blue:#0562bc;
+  --color-ripstop-purple:#7f4e88;
+  --color-ripstop-black:#000000;
+  --color-challenge-deeppurple:#3b336e;
+  --color-challenge-lemonlime:#d1f502;
+  --color-challenge-brightorange:#fd3402;
+  --color-challenge-brightblue:#0160c4;
+  --color-nylon-pink:#cd5994;
+
+  /* Tissus mixtes */
+  --color-ultragrid-veryberry:#9e416e;
+  --color-ultragrid-keylime:#aeb821;
+  --color-ultragrid-tangerine:#fb7427;
+  --color-ultragrid-bluewave:#2b6373;
+  --color-ultragrid-moss:#678064;
+  --color-ultragrid-darkchili:#8b3b2f;
+  --color-ultragrid-blackout:#000000;
+
+  /* --- Rôles : utilisés par les composants, ils pointent vers la palette --- */
+  --color-bg:var(--color-white);
+  --color-bg-subtle:var(--color-neutral-light);
+  --color-text:var(--color-black);
+  --color-text-muted:var(--color-neutral);
+  --color-link:var(--color-primary-dark);
+  --color-on-primary:var(--color-black);   /* texte sur un bouton (7,5:1) */
+  --color-on-secondary:var(--color-white); /* texte sur les bandeaux */
+
+  /* --- Couleurs dérivées, calculées automatiquement --- */
+  --color-border:color-mix(in srgb,var(--color-text) 14%,var(--color-bg));
+  --color-on-secondary-muted:color-mix(in srgb,var(--color-on-secondary) 72%,var(--color-secondary));
+  --color-secondary-border:color-mix(in srgb,var(--color-on-secondary) 25%,var(--color-secondary));
+  --color-primary-hover:color-mix(in srgb,var(--color-primary) 85%,black);
+
+  /* Typographie */
+  --font-family-heading:"Bricolage Grotesque",system-ui,sans-serif;
+  --font-family-body:"Bricolage Grotesque",system-ui,sans-serif;
+  --font-weight-heading:800;
+  --font-scale-heading:1;
+  --font-size-base:17px;
+  --font-size-sm:15px;
+  --font-size-xs:13px;
+  --font-size-h1:calc(clamp(40px,6vw,76px) * var(--font-scale-heading));
+  --font-size-h2:calc(clamp(28px,3.4vw,40px) * var(--font-scale-heading));
+  --font-size-h3:calc(24px * var(--font-scale-heading));
+
+  /* Formes et espacements */
+  --radius-md:16px;
+  --radius-sm:calc(var(--radius-md) * .6);
+  --space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:24px;--space-6:32px;--space-7:48px;--space-8:64px;
+  --container-width:1120px;
+
+  /* Illustrations provisoires */
+  --illustration-bg:var(--color-bg-subtle);--illustration-stroke:var(--color-text);--illustration-accent:var(--color-bg);
+  color-scheme:light;
+}
